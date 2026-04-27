@@ -1,0 +1,157 @@
+/* ================= CARD GERAL ================= */
+
+.codex-shell,
+.reference-shell{
+  background:#0f1e2e;
+  border:1px solid #2c4c6b;
+  border-radius:14px;
+  padding:18px;
+  margin-bottom:22px;
+}
+
+.codex-shell,
+.reference-shell{
+  overflow:hidden;
+}
+
+.codex-shell summary,
+.reference-shell summary{
+  list-style:none;
+  cursor:pointer;
+}
+
+.codex-shell summary::-webkit-details-marker,
+.reference-shell summary::-webkit-details-marker{
+  display:none;
+}
+
+.codex-head{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:16px;
+}
+
+.codex-title-wrap{
+  flex:1;
+}
+
+.codex-title{
+  font-size:26px;
+  margin-bottom:8px;
+}
+
+.codex-text{
+  color:#dce4ec;
+  line-height:1.55;
+  margin-bottom:18px;
+}
+
+.codex-toggle{
+  font-size:28px;
+  line-height:1;
+  color:#c8d3df;
+  padding-top:2px;
+}
+
+.codex-shell[open] .codex-toggle::before{
+  content:"–";
+}
+
+.codex-shell:not([open]) .codex-toggle::before{
+  content:"+";
+}
+
+.codex-columns{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:18px;
+}
+
+.codex-column{
+  border:1px solid #2c4c6b;
+  border-radius:12px;
+  background:#102235;
+  overflow:hidden;
+}
+
+.codex-column-header{
+  padding:12px 14px;
+  background:#12304b;
+  border-bottom:1px solid #2c4c6b;
+  font-size:20px;
+}
+
+.codex-column-body{
+  padding:14px;
+}
+
+.codex-column > summary{
+  list-style:none;
+  cursor:pointer;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.codex-column > summary::-webkit-details-marker{
+  display:none;
+}
+
+.codex-column > summary::after{
+  content:"◀";
+  font-size:18px;
+  opacity:0.7;
+  transition:transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* quando aberto vira "-" (na real gira o +) */
+.codex-column[open] > summary::after{
+  transform:rotate(-90deg);
+  opacity:1;
+}
+
+.category-block{
+  margin-bottom:14px;
+  border:1px solid #2c4c6b;
+  border-radius:10px;
+  overflow:hidden;
+  background:#0f1e2e;
+}
+
+.category-block summary{
+  list-style:none;
+  cursor:pointer;
+  padding:12px 14px;
+  background:#11263a;
+  transition:background 0.2s;
+}
+
+.category-block summary:hover{
+  background:#15314a;
+}
+
+.category-block summary::-webkit-details-marker{
+  display:none;
+}
+
+.category-title{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.category-title::after{
+  content:"+";
+  font-size:20px;
+  color:#c8d3df;
+}
+
+.category-block[open] .category-title::after{
+  content:"–";
+}
+
+.category-content{
+  padding:14px;
+}

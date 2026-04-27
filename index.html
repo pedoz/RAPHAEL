@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0b1520">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valthric</title>
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
+<style>
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: serif;
+  color: #ffffff;
+
+  background:
+    linear-gradient(rgba(5,10,15,0.9), rgba(5,10,15,0.95)),
+    url("img/fundo.png");
+
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 4px;
+  font-size: 84px;
+  
+}
+
+.banner{
+  width:100%;
+  margin: 0 0 24px 0;      /* espaço antes dos cards */
+  border-radius:14px;
+  overflow:hidden;
+  border:1px solid #2c4c6b;
+  background:#162b3f;
+  
+  /* controla a “altura” mantendo responsivo */
+  aspect-ratio: 16 / 9;    /* ajusta: 16/6 fica mais alto */
+}
+
+.banner img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  object-position:center 12%;
+}
+
+/* GRID - DESKTOP */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+/* CARD */
+.card {
+  text-decoration: none;
+  color: white;
+
+  background: rgba(8,14,22,0.65);
+  border: 1px solid rgba(80,120,160,0.15);
+  border-radius: 14px;
+
+  backdrop-filter: blur(6px);
+
+  overflow: hidden;
+
+  transition: all 0.2s ease;
+
+  box-shadow:
+    0 6px 24px rgba(0,0,0,0.7);
+  border-radius: 14px;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* IMAGEM */
+.icon-box {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  background: rgba(6,12,18,0.7);
+  border-bottom: 1px solid rgba(80,120,160,0.15);
+
+  overflow: hidden;
+}
+
+.icon-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* TÍTULO */
+.card h2 {
+  margin: 12px 0 14px 0;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+
+.main-title{
+  text-align:center;
+
+  font-size:clamp(2.5rem, 5vw, 4.5rem);
+  letter-spacing:3px;
+
+  color:#e6edf5;
+
+  text-shadow:
+    0 0 12px rgba(180,220,255,0.15),
+    0 0 40px rgba(10,20,35,0.9);
+}
+
+.main-subtitle{
+  text-align:center;
+  font-size:clamp(1rem, 1.5vw, 1.3rem);
+  color:#8fa3b8;
+  font-style:italic;
+  margin-bottom:25px;
+  opacity:0.7;
+  letter-spacing:0.5px;
+}
+
+
+.main-subtitle{
+  text-align:center;
+  font-size:45px;
+  color:#8fa3b8;
+  font-style:italic;
+  margin-bottom:20px;
+  opacity:0.7;
+  letter-spacing:0.5px;
+  display:inline-block;
+}
+
+.main-subtitle:hover{
+  animation:subtitleShake 0.18s linear infinite;
+}
+
+.subtitle-wrap::after{
+  content:"";
+  display:block;
+
+  width:140px;
+  height:1px;
+
+  margin:12px auto 20px;
+
+  background:linear-gradient(
+    to right,
+    transparent,
+    rgba(120,160,200,0.25),
+    transparent
+  );
+}
+
+@keyframes subtitleShake{
+  0%   { transform:translate(0, 0); }
+  25%  { transform:translate(-0.5px, 0.5px); }
+  50%  { transform:translate(0.5px, -0.5px); }
+  75%  { transform:translate(-0.5px, -0.5px); }
+  100% { transform:translate(0, 0); }
+}
+
+.subtitle-wrap{
+  text-align:center;
+}
+
+/* 📱 CELULAR (1 POR LINHA) */
+@media (max-width: 600px) {
+  body {
+    padding: 16px;
+  }
+  h1 {
+  text-align: center;
+  margin-bottom: 4px;
+  font-size: 36px;
+  
+}
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card h2 {
+    font-size: 20px;
+  }
+}
+
+.main-title{
+  font-size:28px;
+}
+
+.main-subtitle{
+  font-size:14px;
+}
+
+/* 📲 TABLET (2 POR LINHA) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+    .banner{
+    aspect-ratio: 16 / 7;  /* ajusta se quiser */
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+  text-align: center;
+  margin-bottom: 4px;
+  font-size: 54px;
+  
+}
+
+.main-subtitle{
+  font-size:14px;
+}
+  
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<h1>
+  Ecos de Valthric
+</h1>
+
+<div class="subtitle-wrap">
+  <p class="main-subtitle">O que foi dito ainda permanece...</p>
+</div>
+
+<!--
+<div class="banner">
+  <img src="img/aventureiros.png" alt="Chuparinos">
+</div>
+-->
+
+<div class="grid">
+
+  <a class="card" href="Deuses/index.html">
+    <div class="icon-box">
+      <img src="img/iconedeuses.png" alt="Deuses">
+    </div>
+    <h2>A Ordem Divina</h2>
+  </a>
+
+
+  <a class="card" href="Forcas/index.html">
+    <div class="icon-box">
+      <img src="img/iconeforcas.png" alt="forcas do mundo">
+    </div>
+    <h2>As Forças do Mundo</h2>
+  </a>
+
+
+  <a class="card" href="#" onclick="event.preventDefault(); alert('🔒 BLOQUEADO');">
+    <div class="icon-box">
+      <img src="img/block.jpg" alt="Baile">
+    </div>
+    <h2>BLOQUEADO</h2>
+  </a>
+  
+
+
+  <a class="card" href="Registros/index.html">
+    <div class="icon-box">
+      <img src="img/iconeregistro.png" alt="Registros">
+    </div>
+    <h2>Os Registros de Valthric</h2>
+  </a>
+  
+
+
+</div>
+
+</body>
+</html>

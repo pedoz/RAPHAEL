@@ -1,0 +1,224 @@
+<!-- BLOCO: REGION + VITRINE -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Título da Página</title>
+
+  <!-- BASE -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- BLOCOS -->
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="banner-regiao.css">
+  <link rel="stylesheet" href="reference-vitrine.css">
+  <link rel="stylesheet" href="codex-estrutura.css">
+  <link rel="stylesheet" href="codex-entry.css">
+  <link rel="stylesheet" href="lore-texto.css">
+  <link rel="stylesheet" href="lore-estrutura.css">
+  <link rel="stylesheet" href="poi.css">
+  <link rel="stylesheet" href="variantes.css">
+</head>
+
+<body>
+
+  <!-- TÍTULO -->
+  <h1 class="page-title">Título</h1>
+  <h3 class="page-subtitle">Subtítulo</h3>
+
+  <!-- CONTEÚDO AQUI -->
+
+
+
+<section class="region-divider">
+  <div class="region-divider-media">
+    <img src="img/teste.png" alt="">
+  </div>
+
+  <div class="region-divider-body">
+    <h2>Título da Região</h2>
+    <p>Descrição da região</p>
+  </div>
+</section>
+
+
+
+<!-- BLOCO: CODEX -->
+
+<details class="codex-shell" open>
+  <summary>
+    <div class="codex-head">
+      <div class="codex-title-wrap">
+        <h2 class="codex-title">Título</h2>
+        <p class="codex-text">Descrição breve</p>
+      </div>
+
+      <span class="codex-toggle"></span>
+    </div>
+  </summary>
+
+  <div class="codex-columns">
+
+    <!-- COLUNA -->
+    <details class="codex-column" open>
+      <summary class="codex-column-header">Categoria</summary>
+
+      <div class="codex-column-body">
+
+        <!-- BLOCO DE CATEGORIA -->
+        <details class="category-block" open>
+          <summary>
+            <span class="category-title">Subcategoria</span>
+          </summary>
+
+          <div class="category-content">
+
+            <!-- GRID -->
+            <div class="codex-grid-f">
+
+              <!-- ENTRY -->
+              <details class="entry" open>
+                <summary>
+                  <div class="entry-media">
+                    <img src="img/teste.png" alt="">
+                  </div>
+
+                  <div class="entry-name">Nome</div>
+                </summary>
+
+                <div class="entry-body">
+                  <p>Descrição do item</p>
+                  <div class="entry-note">Nota opcional</div>
+                </div>
+              </details>
+
+            </div>
+
+          </div>
+        </details>
+
+      </div>
+    </details>
+
+  </div>
+</details>
+
+
+
+
+<!-- BLOCO: VARIANTES -->
+<!-- BLOCO: VARIANTES -->
+
+<details class="reference-shell" open>
+  <summary>
+    <div class="reference-head">
+      <div class="reference-title-wrap">
+        <h3 class="reference-title">Saiba mais</h3>
+      </div>
+      <span class="reference-toggle"></span>
+    </div>
+  </summary>
+
+  <div class="variant-shell">
+    <div class="variant-title">Variantes</div>
+    <div class="variant-subtitle">Subtítulo opcional</div>
+
+    <div class="variant-columns">
+
+      <!-- COLUNA A -->
+      <div class="variant-column">
+        <h3>Categoria A</h3>
+
+        <div class="variant-list">
+
+          <article class="variant-entry">
+            <div class="variant-media">
+              <img src="img/teste.png" alt="">
+            </div>
+
+            <div class="variant-body">
+              <h4>Variante 1</h4>
+              <p>Descrição da variante</p>
+              <div class="variant-note">Nota opcional</div>
+            </div>
+          </article>
+
+          <article class="variant-entry">
+            <div class="variant-media">
+              <img src="img/teste.png" alt="">
+            </div>
+
+            <div class="variant-body">
+              <h4>Variante 2</h4>
+              <p>Outra descrição</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- COLUNA B -->
+      <div class="variant-column">
+        <h3>Categoria B</h3>
+
+        <div class="variant-empty">
+          Nenhuma variante aqui
+        </div>
+      </div>
+
+    </div>
+  </div>
+</details>
+
+
+<!-- BLOCO: POI -->
+<details class="reference-shell" open>
+  <summary>
+    <div class="reference-head">
+      <div class="reference-title-wrap">
+        <h3 class="reference-title">Pontos de Interesse</h3></div>
+     
+      <span class="reference-toggle" aria-hidden="true"></span>
+    </div></div>
+  </summary>
+<div class="poi-grid">
+
+  <a class="poi-card" href="#">
+    <div class="poi-thumb">
+      <img src="img/teste.png" alt="">
+    </div>
+    <span>POI 1</span>
+  </a>
+
+  <a class="poi-card" href="#">
+    <div class="poi-thumb">
+      <img src="img/teste.png" alt="">
+    </div>
+    <span>POI 2</span>
+  </a>
+
+</div>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- NAVEGAÇÃO -->
+  <div class="nav">
+    <a class="nav-btn" href="#">Voltar</a>
+  </div>
+
+</body>
+</html>
