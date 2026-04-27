@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O Baile</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="mapa.css">
+
+
+</head>
+
+<body>
+<br>
+<h1 class="page-title">Seja bem-vindo ao Baile</h1>
+<h3 class="page-subtitle">Aqui, a máscara mostra a verdadeira identidade de quem a veste</h3>
+
+<br>
+<details class="reference-shellm" style="color: #000000;" open>
+
+  <!-- 🔹 CABEÇALHO (CLICÁVEL) -->
+  <summary>
+    <div class="reference-head">
+      <div class="reference-title-wrap">
+        <h3 class="reference-title">O Mapa de Astória</h3>
+        <div class="reference-subtitle">
+          Busque, explore, mas cuidado pra não cair no meio do fogo cruzado...
+        </div>
+      </div>
+      <span class="reference-toggle" aria-hidden="true"></span>
+    </div>
+  </summary>
+<div class="lore-separatorb"></div>
+<div class="mapa-layout">
+<div class="mapa-container">
+
+  <div class="mapa-viewport">
+    <div class="mapa-track">
+
+      <!-- MAPA 1 -->
+      <div class="mapa" id="mapa1">
+        <img id="img1" src="mapa/m-astoria1-base.png" class="mapa-img">
+
+        <div class="poi quest" style="bottom:13%; right:17%;"
+             onclick="abrirInfo('termopilas')"></div>
+      </div>
+
+      <!-- MAPA 2 -->
+      <div class="mapa" id="mapa2">
+        <img id="img2" src="mapa/m-astoria2-base.png" class="mapa-img">
+
+        <div class="poi rumor" style="top:65%; right:5%;"
+             onclick="abrirInfo('anoes')"></div>
+      </div>
+
+      <!-- MAPA 3 -->
+      <div class="mapa" id="mapa3">
+       <img id="img3" src="mapa/m-astoria3-base.png" class="mapa-img">
+
+        <div class="poi local" style="top:60%; right:5%;"
+             onclick="abrirInfo('Minas')"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CONTROLES FICAM FORA DO TRACK -->
+  <div class="mapa-controles">
+    <button onclick="trocarMapa(-1)">▲</button>
+	<button onclick="trocarVisual('base')">🌍</button>
+<button onclick="trocarVisual('politico')">⚔️</button>
+    <button onclick="trocarMapa(1)">▼</button>
+  </div>
+
+</div>
+<div>
+
+  <div class="mapa-info">
+
+<div id="mapa-info">Clique em um ponto</div>
+
+</div>
+
+
+</div></div>
+</details>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+<!-- ===================== -->
+<!--  O SUCESSOR LEGITIMO-->
+<!-- ===================== -->
+
+
+
+
+
+
+
+
+<!-- EU MUDEI O CABEÇALHO AQUI!!! -->
+
+<details class="reference-shell" open> 
+  <summary>
+    <div class="reference-head">
+      <div class="reference-title-wrap">
+        <h3 class="reference-title" style="color:#000000;">O Sucessor Legítimo</h3>
+        <div class="reference-subtitle" style="text-Align:center; margin-Bottom:24px; color:#000000;">
+
+          <b>O reino sabe quem deveria estar lá</b>
+        </div>
+		</div>
+		<span class="reference-toggle" aria-hidden="true"></span>
+		</div>
+		</summary>
+<div class="wrap">
+ 
+<div class="npc-grid">
+
+
+
+  <section class="chosen bgb">
+  <div class="avatar">
+    
+      <img src="img/elenira.png" alt="Elenira">
+    </a>
+  </div>
+
+  <div class="card bgb  lb">
+  <img class="npc-symbol" src="img/casas/colheita.png" alt="Casa da Coroa">
+  <div class="card-content bgb lb">
+    <h2 class="npc-name lb">Elenira Thalos</h2>
+
+    <details class="fold b">
+      <summary>
+        <p class="npc-role">A Dama do Lindori</p>
+			<p class="npc-subrole">Aquela que sustenta o fluxo</p>
+		  <div class="npc-house">
+    Casa das Colheita
+  </div> <div class="lore-separatorb"></div>
+      </summary>
+
+        <div class="fold-body">
+          <div class="blocks lb">
+
+            <h2>Título:</h2>
+
+            <div class="block">
+              <p>
+                Textoasddddddddddddddddddd
+              </p>
+            
+			<p>
+                Texto!
+              </p>
+			</div>
+            <p class="comment">
+              A essa altura, Trudd já havia compreendido...
+            </p>
+
+          </div>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+  
+ <section class="chosen bgp lp">
+  <div class="avatar" style ="border:0px solid #000000;">
+    
+      <img src="img/cassandra.png" alt="Cassandra">
+    </a>
+  </div>
+
+  <div class="card bgp lp">
+  <img class="npc-symbol" src="img/casas/matriarcas.png" alt="Casa das Matriarcas">
+    <div class="card-content bgp lp">
+
+      <h2 class="npc-name lp">Cassandra Vale</h2>
+
+      <details class="fold p">
+        <summary>
+          <p class="npc-role">General</p>
+		  <p class="npc-subrole">Influência Central</p>
+
+          <div class="npc-house">
+            Casa das Matriarcas
+          </div><div class="lore-separatorp"></div>
+        </summary>
+
+        <div class="fold-body">
+          <div class="blocks lp">
+
+            <h2>Título da História:</h2>
+
+            <div class="block">
+              <p>
+                Texto
+              </p>
+            
+			<p>
+                Texto!
+              </p>
+			</div>
+            <p class="comment">
+              A essa altura, Trudd já havia compreendido...
+            </p>
+
+          </div>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+
+
+   <section class="chosen bgp lp">
+  <div class="avatar" style ="border:0px solid #000000;">
+    
+      <img src="img/nyvara.png" alt="Nyvara">
+    </a>
+  </div>
+
+  <div class="card bgp lp">
+  <img class="npc-symbol" src="img/casas/matriarcas.png" alt="Casa das Matriarcas">
+    <div class="card-content bgp lp">
+    <h2 class="npc-name lp">Nyvara Korr</h2>
+
+    <details class="fold p">
+      <summary>
+        <p class="npc-role">General</p>
+		<p class="npc-subrole">Ideal de Guerra</p>
+		  <div class="npc-house">
+    Casa das Matriarcas
+  </div>
+       <div class="lore-separatorp"></div>
+      </summary>
+
+      <div class="fold-body">
+        <div class="blocks lp">
+
+          <h2>Escrituras do Tomo de Trudd:</h2>
+
+          <div class="block">
+                      <p>
+            </p>
+          </div>
+
+          <p class="comment">
+            A essa altura, Trudd já havia compreendido. 
+          </p>
+
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="chosen bgv">
+  <div class="avatar" style ="border:0px solid #9e1b2f;">
+    
+      <img src="img/maldrath.png" alt="Maldrath">
+    </a>
+  </div>
+
+  <div class="card bgv  lv">
+  <img class="npc-symbol" src="img/casas/linhagem.png" alt="Casa da Linhagem">
+  <div class="card-content bgv lv">
+
+      <h2 class="npc-name lv">Maldrath Varyn</h2>
+
+      <details class="fold v">
+        <summary>
+          <p class="npc-role">Rei</p>
+		  <p class="npc-subrole">Guardião da Linhagem</p>
+
+          <div class="npc-house">
+            Casa da Linhagem
+          </div><div class="lore-separatorvp"></div>
+        </summary>
+
+        <div class="fold-body">
+          <div class="blocks lv">
+
+            <h2>Título da História:</h2>
+
+            <div class="block">
+              <p>
+                Texto
+              </p>
+            
+			<p>
+                Texto!
+              </p>
+			</div>
+            <p class="comment">
+              A essa altura, Trudd já havia compreendido...
+            </p>
+
+          </div>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+  </div>
+  
+  
+</details>
+
+
+
+
+
+
+
+
+
+
+<br>
+<!-- ===================== -->
+<!-- O Herdeiro Vigente -->
+<!-- ===================== -->
+
+
+
+<br>
+<br>
+
+
+<div class="nav">
+  <a class="nav-btn" href="../index.html">← Voltar</a>
+</div>
+
+</details>
+<script src="mapa-info.js"></script>
+<script>
+let mapaAtual = 0;
+const track = document.querySelector(".mapa-track");
+const totalMapas = document.querySelectorAll(".mapa").length;
+
+function trocarMapa(direcao) {
+  mapaAtual += direcao;
+
+  if (mapaAtual < 0) mapaAtual = 0;
+  if (mapaAtual >= totalMapas) mapaAtual = totalMapas - 1;
+
+  track.style.transform = `translateY(-${mapaAtual * 100}%)`;
+}
+
+function abrirInfo(chave){
+  const info = infos[chave];
+
+  if(!info) return;
+
+  const container = document.getElementById("mapa-info");
+
+  container.innerHTML = `
+    <div class="info-titulo">${info.titulo}</div>
+    <hr class="info-separator">
+    <div class="info-descricao">${info.descricao}</div>
+    <div class="info-comentario">${info.comentario}</div>
+  `;
+
+  container.classList.remove("info-animar");
+  void container.offsetWidth;
+  container.classList.add("info-animar");
+}
+function trocarVisual(tipo){
+
+  document.getElementById("img1").src = "mapa/m-astoria1-" + tipo + ".png";
+  document.getElementById("img2").src = "mapa/m-astoria2-" + tipo + ".png";
+  document.getElementById("img3").src = "mapa/m-astoria3-" + tipo + ".png";
+
+}
+</script>
+</body>
+</html>
+
+  
+
