@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A História da Palavra</title>
+<link rel="stylesheet" href="style.css">
+
+<script>
+function abrirEnigmaKalymos(){
+  const resposta = prompt("Aquilo que convenceu o mundo… e elevou um homem a Deus:");
+
+  if(!resposta) return;
+
+  const normalizado = resposta
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .trim();
+
+  if(normalizado === "palavra"){
+    window.location.href = "../Secrets/kalymos/index.html";
+  } else {
+    alert("Nada responde.");
+  }
+}
+</script>
+
+<body>
+
+<h1 class="found-title"><span class="kalymos">Kalymos</span> </h1><br>
+<div class="wrap">
+<section class="found">
+
+  <div class="found-row has-media">
+    <div class="found-media">
+      <img src="img/kalymos.jpg" alt="Kalymos" style="object-position: center 30%;">
+    </div>
+
+    <div class="found-card kalymos-card">
+	<br><br>
+      <div class ="lore" style="text-Indent:16px">
+<p> Kalymos… o mortal que se tornou um deus. Que ironia, não?</p>
+
+<p> Quando conto isso, pode soar como exagero, ou pior - loucura. Um homem ascendendo à divindade, não pela força... não no sentido habitual. Ele não empunhava lâminas, não erguia exércitos. Ele... falava.</p>
+
+<p> E isso bastava.</p>
+
+<p> Alguns o chamaram de profeta. Outros, de guia. Salvador, para muitos. Visionário, para outros tantos. Há quem diga que ele foi apenas um homem no lugar certo... E com as palavras certas.</p>
+
+<p> Mas palavras, ditas pela pessoa certa... tornam o resto irrelevante.</p>
+			<hr>
+		<p> "Para garantir a paz, Kalymos apresentou os Anjos: seres de luz destinados a proteger os justos. Contudo, a revelação de um plano oculto levou o panteão ao que foi conhecido como A Grande Guerra" </p>
+		<p> "Com grande sacrifício, Kalymos foi derrotado - Baruuk sentenciou, Mordekaiser executou. Desde então,passou a ser lembrado como o Deus da Manipulação" </p>
+      </div>
+	<div style="text-align:center; margin-top:20px;">
+	
+<button class="nav-btn kalymos" onclick="abrirEnigmaKalymos()">
+  <i>O Deus da Palavra...</i>
+</button>
+</div>
+    </div>
+  </div>
+
+
+
+
+<hr>
+
+
+<div class="nav">
+<a class="nav-btn back" href="../index.html">← Voltar</a>
+</div>
+</section>
+</div>
+
+</body>
+</html>

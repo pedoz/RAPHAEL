@@ -1,0 +1,451 @@
+
+/*                                 ================= BASE ================= */
+
+body{
+  margin:0;
+  padding:24px;
+
+  background:
+    linear-gradient(rgba(11,21,32,0.85), rgba(11,21,32,0.95)),
+    url("T1.png");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  font-family:serif;
+  color:#fff;
+}
+
+.wrap{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:28px;
+}
+
+/*                                 ================= TRECHO ================= */
+
+.found{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+/* TÍTULO FORA DA CAIXA */
+.found-title{
+  font-size:34px;
+  margin:0;
+  text-align:center;
+}
+
+/* LINHA (IMAGEM + CARD) */
+.found-row{
+  display:flex;
+  flex-direction:column; /* mobile: imagem acima */
+  gap:16px;
+}
+
+/* Opção: sem imagem */
+.found-row.no-media .found-media{ display:none; }
+
+
+
+
+.fold{
+  margin-top: -30px;
+  border: 2px solid #2c4c6b;
+  border-radius: 14px;
+  overflow: hidden;
+
+  background: #0f1e2e;
+  box-shadow: 0 8px 24px rgba(0,0,0,.18);
+}
+
+.fold > summary{
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+  padding: 18px 20px;
+  background: linear-gradient(180deg, #132438 0%, #0f1e2e 100%);
+  transition: background .2s ease, transform .2s ease;
+}
+
+.fold > summary:hover{
+  background: linear-gradient(180deg, #1a3148 0%, #132438 100%);
+}
+
+.fold > summary::-webkit-details-marker{
+  display: none;
+}
+
+.fold-summary{
+  text-align: center;
+}
+
+.fold-title{
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.fold-subtitle{
+  font-size: 16px;
+  color: #b9c7de;
+  opacity: .95;
+}
+
+.fold > summary::after{
+  content: "▾";
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #b9c7de;
+  transition: transform .2s ease;
+}
+
+.fold[open] > summary::after{
+  content: "▴";
+}
+
+
+
+
+.found-row.has-media.media-50 .found-media{
+  width: 50% !important;
+  max-height: 75vh;
+}
+
+.found-row.has-media.media-50 .found-card{
+  width: 50% !important;
+}
+
+
+/*                                 ================= IMAGEM ================= */
+/* Mobile: quadrada e cheia (via 100vw abaixo) */
+.found-media{
+  width:100%;
+  aspect-ratio: 1 / 1;
+  overflow:hidden;
+  border-radius:14px;
+  background:#000;
+border: 2px solid #d4b26a;
+box-shadow: 0 0 18px rgba(212,178,106,0.35);
+}
+
+.found-media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+/* DIVISOR DOURADO COM FADING */
+hr{
+  border: none;
+  height: 2px;
+  margin: 22px 0;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(212,178,106,0.25),
+    rgba(212,178,106,0.9),
+    rgba(212,178,106,0.25),
+    transparent
+  );
+
+  box-shadow: 0 0 12px rgba(212,178,106,0.35);
+}
+/* NAVEGAÇÃO                         =========================*/
+
+.nav{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  margin-top:8px;
+}
+
+.nav-btn{
+  flex:1; /* 🔥 faz ocupar toda largura */
+  text-align:center;
+  text-decoration:none;
+  color:#fff;
+  background:#162b3f;
+  border: 2px solid #d4b26a;
+box-shadow: 0 0 18px rgba(212,178,106,0.35);
+  border-radius:8px;
+  padding:14px 18px;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.nav-btn:hover{
+  background:#1f3a56;
+}
+
+
+/*                                 ================= CARD TEXTO ================= */
+
+.found-card{
+  width:100%;
+  background:#0f1e2e;
+  border-radius:14px;
+  padding: 2px 26px 26px 26px;
+border: 2px solid #d4b26a;
+box-shadow: 0 0 18px rgba(212,178,106,0.35);
+}
+
+.ilegivel{
+  font-style: italic;
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+
+
+/* TEXTO ESTILO LIVRO */
+.lore{
+  font-size:19px;
+  line-height:1.75;
+  color:#ffffff;
+
+  text-align:justify;
+  text-justify:inter-word;
+  hyphens:none; /* impede sabe- doria */
+  margin:0;
+}
+
+.lore p{
+  margin:0 0 10px 0;
+}
+
+
+.lore p:last-child{ margin-bottom:0; }
+
+/*                                 ================= DESKTOP ================= */
+@media (min-width: 721px){
+
+  /* imagem + card lado a lado */
+  .found-row.has-media{
+    flex-direction:row;
+    align-items:stretch;
+  }
+
+  /* imagem acompanha altura do card */
+  .found-row.has-media .found-media{
+    flex:0 0 auto;
+    width: min(320px, 35%);
+    min-height: 220px;
+    align-self:stretch;
+  }
+
+  .found-row.has-media .found-card{
+    flex:1;
+    min-height: 220px;
+
+  }
+
+  .found-row.has-media .found-media img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+
+  /* Variante: quadro grande (metade da tela) */
+  .found-row.has-media.big-media .found-media{
+    width: 50%;
+    min-height: 55vh;
+  }
+
+  .found-row.has-media.big-media .found-card{
+    width: 50%;
+    min-height: 55vh;
+  }
+
+  /* Cards SEM imagem: centraliza e limita largura */
+  .found-row.no-media{
+    display:flex;
+    justify-content:center;
+  }
+
+  .found-row.no-media .found-card{
+    flex: 1;
+	margin:0 auto;
+    max-width: calc(100% - min(320px, 35%) - 16px);
+  }
+  .found-row.has-media.horizontal{
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .found-row.has-media.horizontal .found-media{
+    width: 45% !important;      /* 42% se quiser “+20%” exato em cima de 35% */
+    aspect-ratio: auto !important;
+    height: auto !important;
+    min-height: 0;
+    align-self: stretch;
+  }
+
+  .found-row.has-media.horizontal .found-card{
+    width: 55% !important;
+  }
+
+  .found-row.has-media.horizontal .found-media img{
+    width: 100%;
+    height: 100%;
+    transform: scale(1.2); /* 1.05 = leve | 1.1 = médio */
+    display: block;
+  }
+}
+
+
+
+
+
+
+.kalymos-card{
+  position: relative;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(212,178,106,0.22) 0%,
+      rgba(212,178,106,0.14) 28%,
+      rgba(25,20,12,0.95) 55%,
+      rgba(10,10,10,1) 80%
+    );
+
+  border: 2px solid #d4b26a;
+
+  box-shadow: 
+    0 0 18px rgba(212,178,106,0.25),
+    inset 0 0 90px rgba(0,0,0,0.85);
+}
+
+.kalymos-card .lore{
+  color: #f6edd8;
+  text-shadow: 0 0 6px rgba(212,178,106,0.15);
+}
+
+
+
+.found-title .kalymos{
+  font-size: 40px;
+  letter-spacing: 3px;
+
+  background: linear-gradient(
+    180deg,
+    #fff6d5 0%,
+    #d4b26a 40%,
+    #8a6a2b 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+
+.nav-btn.kalymos{
+  background: linear-gradient(
+    180deg,
+    #0c0c0c 0%,
+    #050505 100%
+  );
+
+  border: 2px solid #d4b26a;
+  border-radius: 10px;
+
+  padding: 14px 26px;
+  font-size: 16px;
+
+  box-shadow:
+    0 0 12px rgba(212,178,106,0.25),
+    inset 0 0 20px rgba(0,0,0,0.8);
+
+  transition: all 0.2s ease;
+}
+
+.nav-btn.kalymos i{
+  font-style: italic;
+  letter-spacing: 1px;
+
+  background: linear-gradient(
+    180deg,
+    #fff6d5 0%,
+    #d4b26a 40%,
+    #8a6a2b 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow:
+    0 0 6px rgba(212,178,106,0.3);
+}
+
+
+.nav-btn.kalymos:hover{
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 0 18px rgba(212,178,106,0.45),
+    inset 0 0 25px rgba(0,0,0,0.9);
+
+  border-color: #f1d38a;
+}
+
+
+.nav-btn.kalymos:active{
+  transform: translateY(0);
+
+  box-shadow:
+    0 0 8px rgba(212,178,106,0.25),
+    inset 0 0 30px rgba(0,0,0,1);
+}
+
+@keyframes kalymos-tremor{
+  0%   { transform: translate(0px, 0px); }
+  25%  { transform: translate(0.2px, -0.2px); }
+  50%  { transform: translate(-0.2px, 0.2px); }
+  75%  { transform: translate(0.15px, 0.15px); }
+  100% { transform: translate(0px, 0px); }
+}
+
+.nav-btn.kalymos{
+  animation: kalymos-tremor 1.8s infinite;
+}
+
+.nav-btn.kalymos:hover{
+  animation: kalymos-tremor 0.6s infinite;
+}
+
+@keyframes kalymos-flicker{
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.92; }
+}
+
+.nav-btn.kalymos{
+  animation:
+    kalymos-tremor 1.8s infinite,
+    kalymos-flicker 3.5s infinite;
+}
+
+.nav-btn.back{
+  background: linear-gradient(
+    180deg,
+    #101820 0%,
+    #0a1118 100%
+  );
+
+  border: 2px solid rgba(212,178,106,0.6);
+
+  box-shadow:
+    0 0 10px rgba(212,178,106,0.18),
+    inset 0 0 16px rgba(0,0,0,0.85);
+}
