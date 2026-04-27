@@ -1,0 +1,513 @@
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  padding:16px;
+  font-family: serif;
+  color:#fff;
+  line-height:1.4;
+
+  background:
+    linear-gradient(rgba(5,10,15,0.85), rgba(5,10,15,0.95)),
+    url("fundo.png");
+backdrop-filter: blur(4px);
+
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+}
+
+/* =========================
+   CONTAINER PRINCIPAL
+========================= */
+.page{
+  max-width:1100px;
+  margin:0 auto;
+}
+
+
+.page-title{
+  text-align:center;
+
+  font-size:clamp(1.9rem, 3.2vw, 2.8rem);
+  font-weight:500;
+  letter-spacing:1.5px;
+
+  margin:30px auto 40px;
+
+  color:#c8d6e5;
+
+  text-shadow:
+    0 0 6px rgba(120,160,200,0.2),
+    0 0 25px rgba(10,20,35,0.9);
+
+  max-width:900px;
+  line-height:1.3;
+  position:relative;
+}
+
+.page-title::after{
+  content:"";
+  display:block;
+
+  width:60%;
+  height:1px;
+
+  margin:18px auto 0;
+
+  background:linear-gradient(
+    to right,
+    transparent,
+    rgba(120,160,200,0.25),
+    transparent
+  );
+}
+
+
+
+/* =========================
+   CARD DO DEUS
+========================= */
+.god-card{
+  background:rgba(5,10,15,0.75);
+  border:1px solid rgba(80,120,160,0.12);
+  border-radius:14px;
+
+  backdrop-filter: blur(6px);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.8),
+    inset 0 0 20px rgba(0,0,0,0.4);
+  padding:12px;
+  margin-bottom:18px;
+  overflow:hidden;
+    transition:transform 0.2s ease;
+}
+
+.god-card:hover{
+  transform:translateY(-3px);
+
+  border:1px solid rgba(40,70,100,0.4);
+
+  box-shadow:
+    0 0 6px rgba(20,40,60,0.25),
+    0 4px 18px rgba(0,0,0,0.8);
+}
+
+/* header fechado */
+.god-summary{
+  list-style:none;
+  cursor:pointer;
+  display:block;
+}
+
+.god-summary::-webkit-details-marker{
+  display:none;
+}
+
+.god-head{
+  display:grid;
+  grid-template-columns: 35% 1fr;
+  gap:12px;
+  align-items:center;
+}
+
+/* ícone */
+.god-icon-wrap{
+  width:100%;
+  aspect-ratio:1 / 1;
+  justify-self:start;
+
+  background:rgba(5,10,15,0.7);
+  border:1px solid rgba(120,160,200,0.15);
+
+  box-shadow:
+    inset 0 0 20px rgba(255,255,255,0.03);
+  border-radius:12px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:14px;
+  overflow:hidden;
+}
+
+
+
+/* AQUI É O SEGREDO */
+.god-icon-wrap img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+}
+
+/* bloco da direita */
+.god-main{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  align-self:stretch;
+}
+
+.god-name{
+  background:rgba(12,24,36,0.5);
+  border:1px solid rgba(120,160,200,0.18);
+
+  backdrop-filter: blur(4px);
+
+  box-shadow:
+    inset 0 0 12px rgba(180,220,255,0.04),
+    0 0 8px rgba(0,0,0,0.6);
+
+  color:#d6e2f0;
+  border-radius:12px;
+
+  flex:3;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:12px 14px;
+  text-align:center;
+  font-size:clamp(1.7rem, 3vw, 2.5rem);
+  font-weight:bold;
+  letter-spacing:0.5px;
+  word-break:break-word;
+}
+
+.god-title{
+background:rgba(8,14,22,0.8);
+border:1px solid rgba(120,160,200,0.15);
+  border-radius:12px;
+
+  flex:2;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:10px 12px;
+  text-align:center;
+  font-size:clamp(1.15rem, 2.2vw, 1.6rem);
+  font-weight:bold;
+  word-break:break-word;
+}
+
+/* conteúdo aberto */
+.god-content{
+  margin-top:12px;
+  display:grid;
+  gap:12px;
+}
+
+.info-box{
+  background:rgba(12,24,36,0.55);
+  border:1px solid rgba(120,160,200,0.12);
+    box-shadow:
+    inset 0 0 10px rgba(180,220,255,0.03);
+  border-radius:12px;
+  padding:14px;
+  text-align:center;
+}
+
+.info-box strong{
+  display:inline;
+  margin:0;
+  font-size:1.02rem;
+}
+
+.domain-text{
+  margin-top:2px;
+}
+
+.dogma-box{
+  background:rgba(12,24,36,0.55);
+  border:1px solid rgba(120,160,200,0.12);
+    box-shadow:
+    inset 0 0 10px rgba(180,220,255,0.03);
+  border-radius:12px;
+  padding:18px 16px;
+  text-align:center;
+}
+
+.dogma-label{
+	
+  display:block;
+  font-style:italic;
+    font-size:0.85rem;
+  font-weight:normal;
+  margin-bottom:6px;
+  opacity:0.9;
+  letter-spacing:0.5px
+}
+
+.dogma-text{
+  margin:0;
+  font-size:clamp(1.4rem, 2vw, 2.3rem);
+  line-height:1.2;
+  font-weight:bold;
+}
+
+/* retrátil interno */
+.inner-details{
+  background:rgba(12,24,36,0.55);
+  border:1px solid rgba(120,160,200,0.12);
+  border-radius:12px;
+  overflow:hidden;
+}
+
+.inner-summary{
+  list-style:none;
+  cursor:pointer;
+  padding:14px 44px;
+  text-align:center;
+  font-weight:bold;
+  font-size:1rem;
+  text-transform:uppercase;
+  letter-spacing:0.08em;
+
+  background:rgba(12,24,36,0.65);
+  border:1px solid rgba(120,160,200,0.15);
+  border-radius:10px;
+
+  backdrop-filter: blur(4px);
+
+  position:relative;
+}
+
+.inner-summary::-webkit-details-marker{
+  display:none;
+}
+
+.inner-summary::before,
+.inner-summary::after{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:0.95rem;
+  opacity:0.85;
+}
+
+.inner-summary::before{
+  content:"▾";
+  left:16px;
+}
+
+.inner-summary::after{
+  content:"▾";
+  right:16px;
+}
+
+.inner-details[open] .inner-summary::before,
+.inner-details[open] .inner-summary::after{
+  content:"▴";
+}
+
+.inner-content{
+	
+  padding:14px 16px;
+  text-align:center;
+}
+
+.inner-content p{
+  margin:0;
+
+  font-size:clamp(1.05rem, 1.2vw, 1.25rem);
+  line-height:1.5;
+}
+/* imagem opcional se quiser recolocar depois */
+.god-image{
+  width:100%;
+  max-width:600px;
+  margin:0 auto;
+
+  aspect-ratio:3 / 4;
+
+  overflow:hidden;
+
+  /* REMOVE ISSO 👇 */
+  border:none;
+  background:none;
+  padding:0;
+}
+
+/* IMAGEM */
+.god-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover; /* 👈 PREENCHE SEM DEIXAR BORDA */
+  display:block;
+  object-position:center center;
+}
+
+.inner-content:has(.god-image){
+  padding:0;
+}
+
+.inline-info{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  text-align:left;
+}
+
+.inline-info div{
+  width:100%;
+  text-align:center;
+  font-size:1.3rem;
+  line-height:1.5;
+}
+
+.inline-info strong{
+  font-size:1.25rem;
+  color:#e2edf7;
+  font-weight:600;
+}
+
+.inline-info div + div{
+  position:relative;
+  padding-top:10px;
+  margin-top:6px;
+}
+
+.inline-info div + div::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:82%;
+  height:1px;
+  background:linear-gradient(
+    to right,
+    rgba(44,76,107,0),
+    rgba(44,76,107,0.65),
+    rgba(44,76,107,0)
+  );
+}
+
+.lore-content{
+  text-align:center;
+}
+
+.lore-content div + div{
+  position:relative;
+  margin-top:10px;
+  padding-top:10px;
+}
+
+.lore-content div + div::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:82%;
+  height:1px;
+  background:linear-gradient(
+    to right,
+    rgba(44,76,107,0),
+    rgba(44,76,107,0.65),
+    rgba(44,76,107,0)
+  );
+}
+
+.soft-divider{
+  position:relative;
+  margin-top:10px;
+  padding-top:10px;
+}
+
+.soft-divider::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:82%;
+  height:1px;
+  background:linear-gradient(
+    to right,
+    rgba(44,76,107,0),
+    rgba(44,76,107,0.65),
+    rgba(44,76,107,0)
+  );
+}
+
+/* =========================
+   NAVEGAÇÃO
+========================= */
+.nav{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  margin-top:8px;
+}
+
+.nav-btn{
+  flex:1;
+  text-align:center;
+  text-decoration:none;
+
+  color:#d6e2f0;
+
+  background:rgba(6,12,18,0.7);
+  border:1px solid rgba(80,120,160,0.2);
+  border-radius:10px;
+
+  padding:14px 18px;
+  font-size:1rem;
+  letter-spacing:0.5px;
+
+  backdrop-filter: blur(4px);
+
+  transition:all 0.2s ease;
+
+  box-shadow:
+    0 4px 18px rgba(0,0,0,0.7);
+}
+
+.nav-btn:hover{
+  background:rgba(10,20,30,0.85);
+
+  border:1px solid rgba(100,140,180,0.3);
+
+  box-shadow:
+    0 0 8px rgba(40,70,100,0.25),
+    0 6px 24px rgba(0,0,0,0.9);
+}
+
+
+.gods-grid{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:16px;
+}
+
+.banner-scroll{
+  max-width:1100px;
+  margin:0 auto;
+  overflow:hidden;
+}
+
+.banner{
+  width:100%;
+  height:clamp(180px, 25vh, 320px);
+  overflow:hidden;
+
+  background:#0f1e2e;
+  border:1px solid #2c4c6b;
+  border-radius:14px;
+}
+
+.banner img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+}
+
+
+
