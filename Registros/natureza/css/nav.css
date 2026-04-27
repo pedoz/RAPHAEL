@@ -1,0 +1,31 @@
+
+/* =========================
+   NAVEGAÇÃO
+========================= */
+.nav{
+  display:flex;
+  justify-content:center; /* centraliza no desktop */
+  margin-top:4px;
+}
+
+.nav-btn{
+  text-align:center;
+  text-decoration:none;
+  color:#fff;
+    background:
+    linear-gradient(
+      180deg,
+      rgba(30,26,55,0.4),
+      rgba(18,16,36,0.9)
+    );
+  border:1px solid rgba(145,125,205,0.22);
+  border-radius:8px;
+  padding:18px 12px; /* mesma altura */
+  display:block;
+  width:100%; /* desktop normal */
+  font-size:16px;
+}
+
+
+.nav-btn:hover{ background:#1f3a56; }
+.nav-spacer{ height:1px; }

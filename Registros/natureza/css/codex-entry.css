@@ -1,0 +1,148 @@
+
+/* ================= GRID DO COMPÊNDIO ================= */
+
+.codex-grid{
+  display:grid;
+  grid-template-columns:1fr;
+}
+
+.codex-grid-f{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:12px;
+  max-width:600px;
+  
+}
+
+.entry{
+  background:
+    linear-gradient(
+      180deg,
+      rgba(110,90,170,0.03),
+      rgba(18,16,36,0.94)
+    );
+
+  border-radius:12px;
+  overflow:hidden;
+
+  border:1px solid rgba(145,125,205,0.14);
+
+  box-shadow:
+    0 6px 18px rgba(0,0,0,0.5),
+    inset 0 0 10px rgba(255,255,255,0.02);
+
+}
+
+
+
+.entry summary{
+  cursor:pointer;
+  list-style:none;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(42,34,76,0.98),
+      rgba(18,16,36,0.98)
+    );
+}
+
+.entry summary::-webkit-details-marker{
+  display:none;
+}
+
+.entry-media{
+  width:100%;
+  aspect-ratio:1 / 1;
+  overflow:hidden;
+  background:#162b3f;
+}
+
+.entry-media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.entry-name{
+	  font-family: "Cormorant Garamond", serif;
+letter-spacing: 0.04em;
+font-size:22px;
+  text-align:center;
+  padding:10px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(110,90,170,0.22),
+      rgba(30,26,55,0.6)
+    );
+
+  position:relative;
+  font-size:17px;
+}
+
+.entry-name::after{
+  content:"+";
+  position:absolute;
+  right:10px;
+  top:50%;
+  transform:translateY(-50%);
+  color:#c8d3df;
+  
+}
+
+.entry[open] .entry-name::after{
+  content:"–";
+}
+
+.entry-body{
+    padding:18px;
+	
+  border-top:1px solid rgba(145,125,205,0.18);
+  border-bottom-left-radius:12px;
+  border-bottom-right-radius:22px;
+}
+
+.entry-body p{
+		  font-family: "Cormorant Garamond", serif;
+letter-spacing: 0.04em;
+font-size:18px;
+  line-height:1.6;
+  margin:0 0 6px 0;
+  color:#e4ebf3;
+}
+
+.entry-note{
+  margin-top:10px;
+  padding-left:10px;
+  border-left:2px solid #2c4c6b;
+  font-style:italic;
+  color:#c8d3df;
+}
+
+.entry:hover{
+  transform:translateY(-2px);
+}
+
+.entry,
+.entry:hover,
+.entry summary,
+.entry:hover summary,
+.entry-name,
+.entry:hover .entry-name,
+.entry-body,
+.entry:hover .entry-body{
+  background:
+    linear-gradient(
+      180deg,
+      rgb(36,28,62),
+      rgb(16,14,32)
+    ) !important;
+}
+
+.entry-media,
+.entry:hover .entry-media{
+  background:rgb(16,14,32) !important;
+}

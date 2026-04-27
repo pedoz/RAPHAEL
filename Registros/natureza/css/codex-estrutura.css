@@ -1,0 +1,220 @@
+/* ================= CARD GERAL ================= */
+
+.codex-shell,
+.reference-shell{
+  background:#0f1e2e;
+  border:1px solid #2c4c6b;
+  border-radius:14px;
+  padding:18px;
+  margin-bottom:22px;
+}
+
+.codex-shell,
+.reference-shell{
+  background:
+    linear-gradient(
+      180deg,
+      rgba(110,90,170,0.06),
+      rgba(16,14,32,0.92)
+    );
+
+  backdrop-filter: blur(6px);
+
+  border:1px solid rgba(145,125,205,0.22);
+
+  box-shadow:
+    0 10px 28px rgba(0,0,0,0.6),
+    inset 0 0 24px rgba(145,125,205,0.04);
+}
+
+.codex-shell summary,
+.reference-shell summary{
+  list-style:none;
+  cursor:pointer;
+}
+
+.codex-shell summary::-webkit-details-marker,
+.reference-shell summary::-webkit-details-marker{
+  display:none;
+}
+
+.codex-head{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:16px;
+}
+
+.codex-title-wrap{
+  flex:1;
+}
+
+.codex-title{
+  font-size:26px;
+  margin-bottom:8px;
+  font-family: "Marcellus", serif;
+letter-spacing: 0.03em;
+}
+
+.codex-text{
+  color:#dce4ec;
+  line-height:1.55;
+  margin-bottom:18px;
+  font-family: "Cormorant Garamond", serif;
+letter-spacing: 0.04em;
+font-size:18px;
+}
+
+.codex-toggle{
+  font-size:28px;
+  line-height:1;
+  color:#c8d3df;
+  padding-top:2px;
+}
+
+.codex-shell[open] .codex-toggle::before{
+  content:"–";
+}
+
+.codex-shell:not([open]) .codex-toggle::before{
+  content:"+";
+}
+
+.codex-columns{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:18px;
+}
+
+.codex-column{
+  border-radius:12px;
+  
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(110,90,170,0.08),
+      rgba(18,16,36,0.94)
+    );
+
+  border:1px solid rgba(145,125,205,0.18);
+
+  box-shadow:
+    inset 0 0 16px rgba(0,0,0,0.4);
+
+  overflow:hidden;
+}
+
+.codex-column-header{
+	  font-family: "Marcellus", serif;
+letter-spacing: 0.03em;
+font-size:24px;
+  padding:12px 14px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(110,90,170,0.35),
+      rgba(30,26,55,0.6)
+    );
+
+
+}
+.codex-column-body{
+	
+  padding:14px;
+}
+
+.codex-column > summary{
+  list-style:none;
+  cursor:pointer;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.codex-column > summary::-webkit-details-marker{
+  display:none;
+}
+
+.codex-column > summary::after{
+  content:"◀";
+  font-size:18px;
+  opacity:0.7;
+  transition:transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* quando aberto vira "-" (na real gira o +) */
+.codex-column[open] > summary::after{
+  transform:rotate(-90deg);
+  opacity:1;
+}
+
+.category-block{
+	
+  margin-bottom:14px;
+
+  border:1px solid rgba(145,125,205,0.16);
+  border-radius:10px;
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(110,90,170,0.06),
+      rgba(18,16,36,0.6)
+    );
+}
+
+.category-block summary{
+  list-style:none;
+  cursor:pointer;
+  padding:12px 14px;
+    background:
+    linear-gradient(
+      180deg,
+      rgba(110,90,170,0.18),
+     rgba(20,18,42,0.95)
+    );
+
+  transition:background 0.2s;
+  transition:background 0.2s;
+}
+
+.category-block summary:hover{
+    background:
+    linear-gradient(
+      180deg,
+      rgba(110,90,170,0.28),
+      rgba(20,28,48,1)
+    );
+}
+
+.category-block summary::-webkit-details-marker{
+  display:none;
+}
+
+.category-title{  font-family: "Marcellus", serif;
+letter-spacing: 0.03em;
+font-size:20px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.category-title::after{
+  content:"+";
+  font-size:20px;
+  color:#c8d3df;
+}
+
+.category-block[open] .category-title::after{
+  content:"–";
+}
+
+.category-content{
+	
+  padding:14px;
+}

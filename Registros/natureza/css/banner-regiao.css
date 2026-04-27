@@ -1,0 +1,82 @@
+/* ================= BANNERS POR REGIÃO ================= */
+
+.region-divider{
+	
+	
+  position:relative;
+
+  margin:26px 0 14px 0;
+  border:1px solid rgba(145,125,205,0.22);
+  border-radius:14px;
+  overflow:hidden;
+
+  min-height:260px;
+
+  box-shadow:
+    0 10px 28px rgba(0,0,0,0.5);
+}
+
+.region-divider h2{
+	
+font-family: "Cinzel Decorative", serif;
+letter-spacing: 0.06em;
+}
+
+.region-divider p{
+	
+  font-family: "Marcellus", serif;
+letter-spacing: 0.03em;
+}
+
+.region-divider-media{
+  position:absolute;
+  inset:0;
+
+  width:100%;
+  height:100%;
+
+  background:rgb(16,14,32);
+}
+
+.region-divider-media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.region-divider-body{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+
+  padding:54px 18px 18px;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(10,8,22,0.92),
+      rgba(10,8,22,0.62),
+      transparent
+    );
+}
+
+.region-divider-body h2{
+  margin:0 0 8px 0;
+  font-size:25px;
+}
+
+.region-divider-body p{
+  margin:0;
+  line-height:1.55;
+  color:#dce4ec;
+}
+
+.region-separator{
+  height:1px;
+  margin:26px auto 30px auto;
+  width:min(92%, 980px);
+  background:linear-gradient(90deg, rgba(44,76,107,0), rgba(44,76,107,0.95), rgba(44,76,107,0));
+}
+
