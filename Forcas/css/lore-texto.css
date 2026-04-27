@@ -1,0 +1,131 @@
+/* texto base */
+.lore,
+.lore-text,
+.lore-textsem,
+.loresem{
+  font-size:20px;
+  line-height:1.45;
+  color:#b9c7de;
+  text-align:justify;
+  text-justify:inter-word;
+}
+
+.lore p{
+  margin:0 0 8px 0;
+  text-indent:32px;
+}
+
+.loresem p{
+  margin:0 0 8px 0;
+  text-indent:0;
+}
+
+.lore-text p{
+  margin:0;
+  text-indent:32px;
+}
+
+.lore-textsem p{
+  margin:0;
+  text-indent:0;
+}
+
+/* links dentro da lore */
+.lore a,
+.lore-text a,
+.lore-textsem a,
+.loresem a{
+  color:#d7e4ff;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+
+.lore a:hover,
+.lore-text a:hover,
+.lore-textsem a:hover,
+.loresem a:hover{
+  color:#ffffff;
+}
+
+
+/* ponte */
+.ponte{
+  text-align:center;
+    padding-top:12px;
+  padding-bottom:20px;
+  font-size:15px;
+  letter-spacing:0.08em;
+  color:rgba(255,255,255,0.5);
+}
+
+/* fala  margin x x x  ->  X  <- move distância da borda       */
+.fala{
+  position:relative;
+  margin:18px 0 18px 40px;
+  padding-left:14px;
+  font-style:italic;
+  color:rgba(255,255,255,0.9);
+}
+
+.fala p{
+  text-indent:4px;
+  margin:0 0 6px 0;
+  line-height:1.6;
+  font-style: italic;
+  letter-spacing:0.02em;
+  transform: skewX(-9deg);
+}
+
+.fala p:last-child{
+  margin-bottom:0;
+}
+
+/* autor opcional da fala */
+.fala::before{
+  content:attr(data-autor);
+  position:absolute;
+  top:50%;
+  left:0;
+  transform:translate(-100%, -50%);
+  font-size:12px;
+  letter-spacing:0.15em;
+  color:rgba(255,255,255,0.4);
+  white-space:nowrap;
+}
+
+.fala::after{
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:5px;
+  width:2px;
+  background:rgba(255,255,255,0.4);
+}
+
+/* frase curta */
+.frase{
+  text-indent:0;
+  margin:8px 0;
+  font-style:italic;
+  color:rgba(255,255,255,0.85);
+}
+
+/* frase inline */
+.frase-inline{
+  position:relative;
+  font-style:italic;
+  color:rgba(255,255,255,0.92);
+  margin:0 4px;
+  padding:0 2px;
+}
+
+.frase-inline::after{
+  content:"";
+  position:absolute;
+  left:2%;
+  right:2%;
+  bottom:0;
+  height:1px;
+  background:rgba(255,255,255,0.4);
+}

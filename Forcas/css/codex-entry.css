@@ -1,0 +1,86 @@
+
+/* ================= GRID DO COMPÊNDIO ================= */
+
+.codex-grid{
+  display:grid;
+  grid-template-columns:1fr;
+}
+
+.codex-grid-f{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:12px;
+  max-width:600px;
+}
+
+.entry{
+  border:1px solid #2c4c6b;
+  border-radius:12px;
+  overflow:hidden;
+  background:#0f1e2e;
+  scroll-margin-top:20px;
+}
+
+.entry summary{
+  cursor:pointer;
+  list-style:none;
+}
+
+.entry summary::-webkit-details-marker{
+  display:none;
+}
+
+.entry-media{
+  width:100%;
+  aspect-ratio:1 / 1;
+  overflow:hidden;
+  background:#162b3f;
+}
+
+.entry-media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.entry-name{
+  text-align:center;
+  padding:10px;
+  background:#102235;
+  position:relative;
+  font-size:17px;
+}
+
+.entry-name::after{
+  content:"+";
+  position:absolute;
+  right:10px;
+  top:50%;
+  transform:translateY(-50%);
+  color:#c8d3df;
+}
+
+.entry[open] .entry-name::after{
+  content:"–";
+}
+
+.entry-body{
+  padding:18px;
+  border-top:1px solid #2c4c6b;
+}
+
+.entry-body p{
+  line-height:1.6;
+  margin:0 0 12px 0;
+  color:#e4ebf3;
+}
+
+.entry-note{
+  margin-top:10px;
+  padding-left:10px;
+  border-left:2px solid #2c4c6b;
+  font-style:italic;
+  color:#c8d3df;
+}
+

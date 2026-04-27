@@ -1,0 +1,45 @@
+
+/* =========================
+   NAVEGAÇÃO
+========================= */
+.nav{
+  display:flex;
+  justify-content:center; /* centraliza no desktop */
+  margin-top:4px;
+}
+
+.nav-btn{
+  text-align:center;
+  text-decoration:none;
+  font-family:"Lora", serif;
+
+  color:#e8e6e3;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(34,18,16,0.25),
+      rgba(10,10,12,0.7)
+    );
+
+  border:2px solid rgba(10,10,12,0.88);
+  border-radius:10px;
+
+  padding:16px 12px;
+
+  display:block;
+  width:100%;
+
+  font-size:16px;
+  letter-spacing:0.04em;
+
+  box-shadow:
+    0 6px 18px rgba(0,0,0,0.6),
+    inset 0 0 12px rgba(120,35,25,0.08);
+
+  transition: all 0.2s ease;
+}
+
+
+.nav-btn:hover{ background:#1f3a56; }
+.nav-spacer{ height:1px; }

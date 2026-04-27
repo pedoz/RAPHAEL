@@ -1,0 +1,139 @@
+
+
+/* ================= REFERÊNCIAS DA REGIÃO ================= */
+
+.reference-head{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:16px;
+
+  margin-bottom:22px;
+
+  border-bottom:none;
+
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      rgba(120,58,48,0.25),
+      transparent
+    ) bottom / 100% 1px no-repeat;
+}
+
+
+
+.reference-head-center {
+  justify-content: center;
+  text-align: center;
+}
+
+.reference-head-center .reference-title-wrap {
+  width: 100%;
+  text-align: center;
+}
+.reference-head:hover{
+  filter: brightness(1.05);
+}
+
+.reference-title-wrap{
+  flex:1;
+  text-align:center;
+
+}
+
+.reference-title{
+	font-family:"Cinzel", serif;
+  font-size:28px;
+  margin-bottom:12px;
+}
+
+.reference-subtitle{
+	font-family:"Lora", serif;
+  font-size:14px;
+  color:#c8d3df;
+  margin-bottom:12px;
+}
+
+.reference-toggle{
+  font-size:28px;
+  line-height:1;
+  color:#c8d3df;
+  padding-top:2px;
+}
+
+.reference-shell[open] .reference-toggle::before{
+  content:"–";
+}
+
+.reference-shell:not([open]) .reference-toggle::before{
+  content:"+";
+}
+
+
+.reference-wrap{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:16px;
+}
+
+.reference-column{
+  border:1px solid #2c4c6b;
+  border-radius:12px;
+  background:#102235;
+  overflow:hidden;
+}
+
+.reference-column h3{
+  margin:0;
+  padding:12px 14px;
+  background:#12304b;
+  border-bottom:1px solid #2c4c6b;
+  font-size:18px;
+}
+
+.reference-grid{
+  padding:14px;
+  display:grid;
+  grid-template-columns:repeat(4, minmax(0, 1fr));
+  gap:12px;
+}
+
+.reference-card{
+  display:block;
+  text-align:center;
+  color:#fff;
+}
+
+.reference-img{
+  width:100%;
+  aspect-ratio:1 / 1;
+  border-radius:10px;
+  overflow:hidden;
+  border:1px solid #2c4c6b;
+  background:#162b3f;
+  margin-bottom:6px;
+}
+
+.reference-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.reference-card span{
+  display:block;
+  font-size:13px;
+  line-height:1.2;
+  color:#d7e1eb;
+}
+
+.reference-card:hover .reference-thumb{
+  border-color:#4b739b;
+}
+
+.reference-grid{
+  justify-content:start;
+  max-width:700px;
+}
