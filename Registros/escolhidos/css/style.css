@@ -1,0 +1,45 @@
+
+*{ box-sizing:border-box; }
+
+:root{
+  --page-bg:#0b1520;
+  --card-bg:#0f1e2e;
+  --stroke:#2c4c6b;
+  --text:#3d3d3f;
+  --muted:#b9c7de;
+
+  /* Desktop */
+  --avatar-size: 180px;
+  --overlap: 40px;
+
+  --radius:14px;
+  --pad:18px;
+  --gap:22px;
+}
+
+body{
+  margin:0;
+  padding:20px;
+
+  background:
+    linear-gradient(
+      rgba(5,5,8,0.90),
+      rgba(5,5,8,0.92)
+    ),
+    url("../bg.png");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  font-family:serif;
+  color:#fff;
+}
+
+.wrap{
+  max-width:1400px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+}

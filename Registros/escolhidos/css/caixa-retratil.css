@@ -1,0 +1,76 @@
+
+/* ===== CAIXA RETRÁTIL ===== */
+.fold{
+  margin-top:6px;
+}
+
+.fold > summary{
+	      	  font-family: "Julee", cursive;
+letter-spacing: 0.05em;
+  list-style:none;
+  cursor:pointer;
+  user-select:none;
+
+  /* aparência */	
+  padding:2px 14px;
+
+   background:none;
+
+
+
+  padding: 28px var(--pad) var(--pad) var(--pad);
+margin-top:2px;
+  margin-left:calc(-1 * var(--overlap));
+  padding-left:calc(var(--pad) + var(--overlap));
+
+  min-height:calc(var(--avatar-size) * 0.8);
+font-size:22px;
+  text-align:center;
+}
+
+/* remove marcador padrão */
+.fold > summary::-webkit-details-marker{ display:none; }
+
+/* indicador (setinha) simples */
+.fold > summary::after{
+  content:"▾";
+  display:block;
+  margin-top:2px;
+  margin-bottom: 2px;
+  opacity:.8;
+  font-size:24px;
+}
+
+.fold[open] > summary::after{
+  content:"▴";
+}
+
+.fold-body{
+  margin-top:2px;
+}
+.comment {
+  position: relative;
+  margin-left: 60px;
+
+    	  font-family: "Eagle Lake", cursive;
+letter-spacing: 0.06em;
+font-size:18px;
+font-weight:300;
+  color: #ffffff;
+  line-height: 1.8;
+}
+
+.comment::before {
+  content: "";
+
+
+  position: absolute;
+  top: 0;
+  left: -20px;
+
+  width: 3px;
+  height: 100%;
+  
+
+  background-color: var(--muted);
+}
