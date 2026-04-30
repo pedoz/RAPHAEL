@@ -26,7 +26,7 @@ body{
       rgba(5,5,8,0.70),
       rgba(5,5,8,0.80)
     ),
-    url("../bg.png");
+    url("../bg.webp");
 
   background-size: cover;
   background-position: center;
