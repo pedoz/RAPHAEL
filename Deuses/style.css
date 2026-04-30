@@ -510,4 +510,112 @@ border:1px solid rgba(120,160,200,0.15);
 }
 
 
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
 
+  body {
+    padding: 12px;
+    background-attachment: scroll;
+  }
+
+  .page {
+    max-width: 100%;
+  }
+
+  .page-title {
+    font-size: 1.55rem;
+    margin: 22px auto 28px;
+    line-height: 1.25;
+  }
+
+  .gods-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .god-card {
+    padding: 14px;
+    margin-bottom: 14px;
+  }
+
+  .god-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .god-icon-wrap {
+    width: 90%;
+    height: 90%;
+    aspect-ratio: 1 / 1;
+    padding: 12px;
+  }
+
+  .god-main {
+    width: 100%;
+    gap: 8px;
+  }
+
+  .god-name {
+    width: 100%;
+    min-height: 58px;
+    font-size: 1.6rem;
+    padding: 10px 12px;
+  }
+
+  .god-title {
+    width: 100%;
+    min-height: 48px;
+    font-size: 1.05rem;
+    padding: 9px 12px;
+  }
+
+  .god-content {
+    margin-top: 12px;
+    gap: 10px;
+  }
+
+  .inline-info div {
+    font-size: 1.05rem;
+  }
+
+  .inline-info strong {
+    font-size: 1.05rem;
+  }
+
+  .dogma-box {
+    padding: 15px 12px;
+  }
+
+  .dogma-text {
+    font-size: 1.35rem;
+  }
+
+  .inner-summary {
+    padding: 12px 40px;
+    font-size: 0.9rem;
+  }
+
+  .inner-content {
+    padding: 12px;
+  }
+
+  .inner-content p {
+    font-size: 1rem;
+  }
+
+  .god-image {
+    max-width: 100%;
+  }
+
+  .nav {
+    flex-direction: column;
+  }
+
+  .nav-btn {
+    width: 100%;
+  }
+}

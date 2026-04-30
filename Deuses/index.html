@@ -6,10 +6,24 @@
 <title>O Panteão</title>
 
 <link rel="stylesheet" href="style.css">
+<link rel="preload" as="image" href="fundo.webp">
 
 
 </head>
+<script>
+  document.querySelectorAll('.god-card img').forEach((img, index) => {
+    const isIcon = img.closest('.god-icon-wrap');
+    const isFirstIcons = isIcon && index < 6;
 
+    if (isFirstIcons) {
+      img.loading = 'eager';
+      img.fetchPriority = 'high';
+    } else {
+      img.loading = 'lazy';
+      img.fetchPriority = 'low';
+    }
+  });
+</script>
 <body>
 <h2 class="page-title">
   A Ordem Divina ainda carrega a marca<br>
@@ -26,7 +40,7 @@
   <summary class="god-summary">
     <div class="god-head">
       <div class="god-icon-wrap">
-        <img src="icons/icaldebaran.png">
+        <img src="icons/icaldebaran.webp">
       </div>
       <div class="god-main">
         <div class="god-name">ALDEBARAN</div>
@@ -59,7 +73,7 @@
       <summary class="inner-summary">Retrato</summary>
       <div class="inner-content">
         <div class="god-image">
-          <img src="retratos/aldebaran.png">
+          <img src="retratos/aldebaran.webp">
         </div>
       </div>
     </details>
@@ -72,7 +86,7 @@
   <summary class="god-summary">
     <div class="god-head">
       <div class="god-icon-wrap">
-        <img src="icons/icbaruuk.png">
+        <img src="icons/icbaruuk.webp">
       </div>
       <div class="god-main">
         <div class="god-name">BARUUK</div>
@@ -106,7 +120,7 @@
       <summary class="inner-summary">Retrato</summary>
       <div class="inner-content">
         <div class="god-image">
-          <img src="retratos/baruuk.png">
+          <img src="retratos/baruuk.webp">
         </div>
       </div>
     </details>
@@ -119,7 +133,7 @@
   <summary class="god-summary">
     <div class="god-head">
       <div class="god-icon-wrap">
-        <img src="icons/iceleanor.png">
+        <img src="icons/iceleanor.webp">
       </div>
       <div class="god-main">
         <div class="god-name">ELEANOR</div>
@@ -152,7 +166,7 @@
       <summary class="inner-summary">Retrato</summary>
       <div class="inner-content">
         <div class="god-image">
-          <img src="retratos/eleanor.png">
+          <img src="retratos/eleanor.webp">
         </div>
       </div>
     </details>
@@ -165,7 +179,7 @@
   <summary class="god-summary">
     <div class="god-head">
       <div class="god-icon-wrap">
-        <img src="icons/icentrati.png">
+        <img src="icons/icentrati.webp">
       </div>
       <div class="god-main">
         <div class="god-name">ENTRATI</div>
@@ -198,7 +212,7 @@
       <summary class="inner-summary">Retrato</summary>
       <div class="inner-content">
         <div class="god-image">
-          <img src="retratos/entrati.png">
+          <img src="retratos/entrati.webp">
         </div>
       </div>
     </details>
@@ -211,7 +225,7 @@
   <summary class="god-summary">
     <div class="god-head">
       <div class="god-icon-wrap">
-        <img src="icons/icilyana.png">
+        <img src="icons/icilyana.webp">
       </div>
       <div class="god-main">
         <div class="god-name">ILYANA</div>
@@ -246,7 +260,7 @@
       <summary class="inner-summary">Retrato</summary>
       <div class="inner-content">
         <div class="god-image">
-          <img src="retratos/ilyana.png">
+          <img src="retratos/ilyana.webp">
         </div>
       </div>
     </details>
@@ -258,7 +272,7 @@
   <summary class="god-summary">
     <div class="god-head">
       <div class="god-icon-wrap">
-        <img src="icons/icjimin.png">
+        <img src="icons/icjimin.webp">
       </div>
       <div class="god-main">
         <div class="god-name">JIMIN</div>
@@ -291,7 +305,7 @@
       <summary class="inner-summary">Retrato</summary>
       <div class="inner-content">
         <div class="god-image">
-          <img src="retratos/jimin.png">
+          <img src="retratos/jimin.webp">
         </div>
       </div>
     </details>
@@ -305,7 +319,7 @@
   <summary class="god-summary">
     <div class="god-head">
       <div class="god-icon-wrap">
-        <img src="icons/icminerva.png">
+        <img src="icons/icminerva.webp">
       </div>
       <div class="god-main">
         <div class="god-name">MINERVA</div>
@@ -339,7 +353,7 @@
       <summary class="inner-summary">Retrato</summary>
       <div class="inner-content">
         <div class="god-image">
-          <img src="retratos/minerva.png">
+          <img src="retratos/minerva.webp">
         </div>
       </div>
     </details>
@@ -352,7 +366,7 @@
   <summary class="god-summary">
     <div class="god-head">
       <div class="god-icon-wrap">
-        <img src="icons/icmirella.png">
+        <img src="icons/icmirella.webp">
       </div>
       <div class="god-main">
         <div class="god-name">MIRELLA</div>
@@ -388,7 +402,7 @@
       <summary class="inner-summary">Retrato</summary>
       <div class="inner-content">
         <div class="god-image">
-          <img src="retratos/mirella.png">
+          <img src="retratos/mirella.webp">
         </div>
       </div>
     </details>
@@ -401,7 +415,7 @@
   <summary class="god-summary">
     <div class="god-head">
       <div class="god-icon-wrap">
-        <img src="icons/icmord.png">
+        <img src="icons/icmord.webp">
       </div>
       <div class="god-main">
         <div class="god-name" style="font-size:clamp(1.7rem, 3vw, 2.3rem");>MORDEKAISER</div>
@@ -435,7 +449,7 @@
       <summary class="inner-summary">Retrato</summary>
       <div class="inner-content">
         <div class="god-image">
-          <img src="retratos/mord.png">
+          <img src="retratos/mord.webp">
         </div>
       </div>
     </details>
@@ -447,7 +461,7 @@
   <summary class="god-summary">
     <div class="god-head">
       <div class="god-icon-wrap">
-        <img src="icons/icnira.png">
+        <img src="icons/icnira.webp">
       </div>
       <div class="god-main">
         <div class="god-name">NIRA</div>
@@ -482,7 +496,7 @@
       <summary class="inner-summary">Retrato</summary>
       <div class="inner-content">
         <div class="god-image">
-          <img src="retratos/nira.png">
+          <img src="retratos/nira.webp">
         </div>
       </div>
     </details>
@@ -495,7 +509,7 @@
   <summary class="god-summary">
     <div class="god-head">
       <div class="god-icon-wrap">
-        <img src="icons/icnyx.png">
+        <img src="icons/icnyx.webp">
       </div>
       <div class="god-main">
         <div class="god-name">NYX</div>
@@ -529,7 +543,7 @@
       <summary class="inner-summary">Retrato</summary>
       <div class="inner-content">
         <div class="god-image">
-          <img src="retratos/nyx.png">
+          <img src="retratos/nyx.webp">
         </div>
       </div>
     </details>
@@ -541,7 +555,7 @@
   <summary class="god-summary">
     <div class="god-head">
       <div class="god-icon-wrap">
-        <img src="icons/iculfred.png">
+        <img src="icons/iculfred.webp">
       </div>
       <div class="god-main">
         <div class="god-name">ÛLFRED</div>
@@ -574,7 +588,7 @@
       <summary class="inner-summary">Retrato</summary>
       <div class="inner-content">
         <div class="god-image">
-          <img src="retratos/ulfred.png">
+          <img src="retratos/ulfred.webp">
         </div>
       </div>
     </details>
@@ -582,11 +596,11 @@
 </details>
 
 <!-- UMBRA -->
-<details class="god-card" id="luna">
+<details class="god-card" id="Umbra">
   <summary class="god-summary">
     <div class="god-head">
       <div class="god-icon-wrap">
-        <img src="icons/icluna.png">
+        <img src="icons/icluna.webp">
       </div>
       <div class="god-main">
         <div class="god-name">UMBRA</div>
@@ -620,7 +634,7 @@
       <summary class="inner-summary">Retrato</summary>
       <div class="inner-content">
         <div class="god-image">
-          <img src="retratos/.png">
+          <img src="retratos/umbra.webp">
         </div>
       </div>
     </details>
@@ -634,7 +648,7 @@
   <summary class="god-summary">
     <div class="god-head">
       <div class="god-icon-wrap">
-        <img src="icons/icuriel.png">
+        <img src="icons/icuriel.webp">
       </div>
       <div class="god-main">
         <div class="god-name">URIEL</div>
@@ -667,7 +681,7 @@
       <summary class="inner-summary">Retrato</summary>
       <div class="inner-content">
         <div class="god-image">
-          <img src="retratos/uriel.png">
+          <img src="retratos/uriel.webp">
         </div>
       </div>
     </details>
