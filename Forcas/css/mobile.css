@@ -1,0 +1,87 @@
+@media (max-width: 768px) {
+
+  /* quebra TODOS layouts com imagem + texto */
+  .lore-possui-img,
+  .lore-possui-img-dir,
+  .lore-possui-img-duas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* força imagem sempre vir antes */
+  .lore-img {
+    order: -1;
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  /* texto ocupa largura total */
+  .lore-text,
+  .lore-textsem {
+    width: 100%;
+    text-align: center;
+  }
+  
+  
+  .fala {
+    margin: 14px 0;
+    padding-left: 12px; /* espaço pra barrinha */
+    position: relative;
+    text-align: left;
+  }
+
+  /* mantém a barra, mas simples e estável */
+  .fala::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    bottom: 6px;
+    width: 2px;
+
+    background: rgba(255,255,255,0.35);
+  }
+
+  /* remove o autor (??? bugado) */
+  .fala::before {
+    display: none;
+  }
+
+  .fala p {
+    transform: none; /* tira inclinação */
+  }
+  
+  .fala::after {
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255,255,255,0.5),
+    transparent
+  );
+  }
+    .region-divider {
+    min-height: 120px;
+  }
+
+  .region-divider-media {
+    aspect-ratio: 4 / 1.2;
+  }
+
+  .region-divider-body {
+    padding: 34px 14px 12px;
+  }
+
+  .region-divider-body h2 {
+    font-size: 1.15rem;
+    line-height: 1.1;
+    margin-bottom: 6px;
+  }
+
+  .region-divider-body p {
+    font-size: 0.9rem;
+    line-height: 1.35;
+  }
+
+}
